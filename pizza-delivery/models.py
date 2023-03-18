@@ -14,10 +14,10 @@ class User(Base):
     orders = relationship('Order', back_populates='user')
 
     def __repr__(self) -> str:
-        return "User {}".format(self.username)
+        return "<User {}>".format(self.username)
     
 
-class Choice(Base):
+class Order(Base):
 
     ORDER_STATUS = (
         ('PENDING', 'pending'),
@@ -41,7 +41,7 @@ class Choice(Base):
     user = relationship('User', back_populates='orders')
 
     def __repr__(self) -> str:
-        return "User {}".format(self.id)
+        return "<User {}>".format(self.id)
     
 
 
