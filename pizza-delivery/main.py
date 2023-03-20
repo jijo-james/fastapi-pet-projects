@@ -8,7 +8,7 @@ app = FastAPI()
 
 
 @AuthJWT.load_config
-async def get_config()
+async def get_config():
     return Settings()
 
 app.include_router(auth_router)
